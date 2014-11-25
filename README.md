@@ -17,9 +17,13 @@ To use the Siebel connector, add the <siebel.init> element in your configuration
         <url>siebel://xxx:2321/SBA_80/ESEObjMgr_enu</url>
     </siebel.init>
 
+- **username**: Siebel account username.
+- **password**: Siebel accout password.
+- **url**: connection string.
+
 ### Call method with encoded string payload
 
-To create a spreadsheet, use siebel.invokeMethod and specify the following properties:
+To invoke a method passing encoded string payload, use siebel.invokeMethod and specify the following properties:
 
       <siebel.invokeMethod>
             <serviceName>Workflow Utilities</serviceName>
@@ -27,5 +31,9 @@ To create a spreadsheet, use siebel.invokeMethod and specify the following prope
             <converterType>string</converterType>
             <propertySet>@0*0*2*2*11*PropertySet3*4*Body11*Attribute 123*Calendar and Activities8*number#11*N2*0*10*Date range3*0*8*EndDates19*2011-07-14 12:11:1110*StartDates19*2011-07-14 11:11:110*0*10*Attachment2*4*VEVTVA==</propertySet>
       </siebel.invokeMethod>
-      
+
+- **serviceName**: The name of Siebel service.
+- **converterType**: A convertert type [string].
+- **methodName**: The name of service method.
+- 
 ### Call method with XML payload
