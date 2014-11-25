@@ -23,7 +23,7 @@ To use the Siebel connector, add the <siebel.init> element in your configuration
 
 ### Call method with encoded string payload
 
-To invoke a method passing encoded string payload, use siebel.invokeMethod and specify the following properties:
+To invoke a method passing encoded string payload, use siebel.invokeMethod with the following properties:
 
       <siebel.invokeMethod>
             <serviceName>Workflow Utilities</serviceName>
@@ -37,3 +37,17 @@ To invoke a method passing encoded string payload, use siebel.invokeMethod and s
 - **methodName**: The name of service method.
 
 ### Call method with XML payload
+
+To invoke a method passing XML palyload, siebel.invokeMethod with the following properties:
+
+    </siebel.init>
+        <siebel.invokeMethod>
+        <serviceName>Workflow Utilities</serviceName>
+        <methodName>Echo</methodName>
+        <converterType>xml</converterType>
+        <propertySet>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;?Siebel-Property-SetEscapeNames="true"?&gt;&lt;PropertySet Attribute_spc1="Calendar and Activities" number_pnd1="N"&gt;&lt;Date_spcrange EndDates="2014-12-12 12:11:11" StartDates="2011-07-14 11:11:11"/&gt;&lt;Attachment sblValueVariant="CCFVT_MEMBLOCK"&gt;VEVTVA==&lt;/Attachment&gt;&lt;/PropertySet&gt;</propertySet>
+      </siebel.invokeMethod>
+
+- **serviceName**: The name of Siebel service.
+- **converterType**: A convertert type [xml].
+- **methodName**: The name of service method.
