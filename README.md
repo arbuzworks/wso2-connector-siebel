@@ -11,25 +11,21 @@ The following sections describe how to perform basic operations with the connect
 ### Connecting to Siebel
 To use the Siebel connector, add the <siebel.init> element in your configuration before any other Siebel connector operations. This configuration authenticates with Siebel by configuring the user credentials and login URL.
 
-``<siebel.init>
-      <username>xxx</username>
-      <password>xxx</password>
-      <url>siebel://xxx:2321/SBA_80/ESEObjMgr_enu</url>
-</siebel.init>``
+    <siebel.init>
+        <username>xxx</username>
+        <password>xxx</password>
+        <url>siebel://xxx:2321/SBA_80/ESEObjMgr_enu</url>
+    </siebel.init>
 
 ### Call method with encoded string payload
 
 To create a spreadsheet, use siebel.invokeMethod and specify the following properties:
 
-- **serviceName**: The name of Siebel service.
-- **converterType**: A convertert type [string].
-- **methodName**: The name of service method.
-
-      ``<siebel.invokeMethod>
+      <siebel.invokeMethod>
             <serviceName>Workflow Utilities</serviceName>
             <methodName>Echo</methodName>
             <converterType>string</converterType>
-            <propertySet></propertySet>
-      </siebel.invokeMethod>``
+            <propertySet>@0*0*2*2*11*PropertySet3*4*Body11*Attribute 123*Calendar and Activities8*number#11*N2*0*10*Date range3*0*8*EndDates19*2011-07-14 12:11:1110*StartDates19*2011-07-14 11:11:110*0*10*Attachment2*4*VEVTVA==</propertySet>
+      </siebel.invokeMethod>
       
 ### Call method with XML payload
