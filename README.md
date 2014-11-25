@@ -58,7 +58,7 @@ To logoff from Siebel, add the <siebel.init> element in your configuration.
 
     <siebel.logoff/>
     
-### Example Scenario
+### Example scenario
 
 This example demonstrates WSO2 ESB's Siebel connector transferring a message triggred by a stock quote client and then sends the response that comes from Siebel back to the client.
 
@@ -108,3 +108,11 @@ Replace the Siebel credentials used in the configuration below with valid creden
             </out>
         </sequence>
     </definitions>
+    
+## Simulating the sample scenario
+
+Send a request as follows using the Stock Quote Client to WSO2 ESB.
+
+    ant stockquote -Dtrpurl=http://localhost:8280
+
+This command executes the connector, which simulates sending a request to Siebel and sends the response from Siebel back to the client.
