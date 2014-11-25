@@ -8,6 +8,9 @@ The following sections describe how to perform basic operations with the connect
 [Call method with encoded string payload](#call-method-with-encoded-string-payload)  
 [Call method with XML payload](#call-method-with-xml-payload) 
 [Logoff from Siebel](#logoff-from-siebel)
+[Example Scenario](#example-scenario)
+[ESB configuration](#esb-onfiguration)
+[Simulating the sample scenario](#simulating-the-sample-scenario)
 
 ### Connecting to Siebel
 To use the Siebel connector, add the <siebel.init> element in your configuration before any other Siebel connector operations. This configuration authenticates with Siebel by configuring the user credentials and login URL.
@@ -109,7 +112,7 @@ Replace the Siebel credentials used in the configuration below with valid creden
         </sequence>
     </definitions>
     
-## Simulating the sample scenario
+### Simulating the sample scenario
 
 Send a request as follows using the Stock Quote Client to WSO2 ESB.
 
