@@ -25,11 +25,10 @@ To create a spreadsheet, usesiebel.invokeMethod and specify the following proper
 - **converterType**: A convertert type [string].
 - **methodName**: The name of service method.
 
-      <siebel.invokeMethod>
-            <serviceName>Workflow Utilities</serviceName>
-            <methodName>Echo</methodName>
-            <converterType>string</converterType>
-            <propertySet></propertySet>
-      </siebel.invokeMethod>
+      <siebel.init>
+            <username>xxx</username>
+            <password>xxx</password>
+            <url>siebel://xxx:2321/SBA_80/ESEObjMgr_enu</url>
+      </siebel.init>
       
 ### Call method with XML payload
