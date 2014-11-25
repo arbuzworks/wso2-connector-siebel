@@ -1,0 +1,15 @@
+<template xmlns="http://ws.apache.org/ns/synapse" name="invokeMethod">
+    <parameter name="serviceName"/>
+    <parameter name="methodName"/>
+    <parameter name="converterType"/>
+    <parameter name="propertySet"/>
+    <sequence>
+        <log level="custom">
+            <property name="serviceName" expression="$func:serviceName"/>
+            <property name="methodName" expression="$func:methodName"/>
+            <property name="converterType" expression="$func:converterType"/>
+            <property name="propertySet" expression="$func:propertySet"/>
+        </log>
+        <class name="org.wso2.carbon.connector.siebel.SiebelInvokeMehod"/>
+    </sequence>
+</template>

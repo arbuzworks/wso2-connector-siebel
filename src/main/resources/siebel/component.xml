@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="siebel" type="synapse/template" >
+    <subComponents> 
+		<component name="init">
+	    		<file>init.xml</file>
+	    		<description>Login to Siebel</description>
+		</component>
+		<component name="invokeMethod">
+			<file>invoke_method.xml</file>
+			<description>Invoke method on Siebel service</description>
+		</component>
+		<component name="logoff">
+			<file>logoff.xml</file>
+			<description>Logoff from Siebel</description>
+		</component>
+    </subComponents>    
+</component>
