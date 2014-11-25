@@ -64,5 +64,47 @@ This example demonstrates WSO2 ESB's Siebel connector transferring a message tri
 
 ### ESB configuration
 - Add the connector to ESB instance, see [Managing Connectors in Your ESB Instance ](https://docs.wso2.com/display/ESB481/Managing+Connectors+in+Your+ESB+Instance).
-- Start the ESB server and log into its management console UI [https: //localhost:9443/carbon](https: //localhost:9443/carbon).
+- Start the ESB server and log into its management console UI [https: //localhost:9443/carbon](https://localhost:9443/carbon).
 - In the management console, navigate to the **Main** menu and click **Source View** in the **Service Bus** section.
+- Copy and paste the following configuration, which helps you explore the example scenario, to the source view.
+
+Replace the Siebel credentials used in the configuration below with valid credentials.
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <definitions xmlns="http://ws.apache.org/ns/synapse">
+        <import name="siebel" package="org.wso2.carbon.connectors" status="enabled"/>
+        <sequence name="fault">
+          <log level="full">
+             <property name="MESSAGE" value="Executing default &#34;fault&#34; sequence"/>
+             <property name="ERROR_CODE" expression="get-property('ERROR_CODE')"/>
+             <property name="ERROR_MESSAGE" expression="get-property('ERROR_MESSAGE')"/>
+          </log>
+          <drop/>
+        </sequence>
+        <sequence name="MessageChannel">
+          <siebel.init>
+             <username>xxx</username>
+             <password>xxx</password>
+             <url>siebel://xxx:2321/SBA_80/ESEObjMgr_enu</url>
+          </siebel.init>
+          <siebel.invokeMethod>
+             <serviceName>Workflow Utilities</serviceName>
+             <methodName>Echo</methodName>
+             <converterType>xml</converterType>
+             <propertySet>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;?Siebel-Property-Set EscapeNames="true"?&gt;&lt;PropertySet Attribute_spc1="Calendar and Activities" number_pnd1="N"&gt;
+                   &lt;Date_spcrange EndDates="2014-12-12 12:11:11" StartDates="2011-07-14 11:11:11"/&gt;
+                   &lt;Attachment sblValueVariant="CCFVT_MEMBLOCK"&gt;VEVTVA==&lt;/Attachment&gt;
+                &lt;/PropertySet&gt;</propertySet>
+             </siebel.invokeMethod>
+            <siebel.logoff/>
+            <respond/>
+        </sequence>
+        <sequence name="main">
+            <in>
+                <sequence key="MessageChannel"/>
+            </in>
+            <out>
+                <send/>
+            </out>
+        </sequence>
+    </definitions>
