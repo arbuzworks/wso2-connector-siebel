@@ -34,7 +34,7 @@ To invoke a method passing encoded string payload, use siebel.invokeMethod with 
       </siebel.invokeMethod>
 
 - **serviceName**: The name of Siebel service.
-- **converterType**: A convertert type [string].
+- **converterType**: A converter type [string].
 - **methodName**: The name of service method.
 
 ### Call method with XML payload
@@ -49,7 +49,7 @@ To invoke a method passing XML palyload, siebel.invokeMethod with the following 
       </siebel.invokeMethod>
 
 - **serviceName**: The name of Siebel service.
-- **converterType**: A convertert type [xml].
+- **converterType**: A converter type [xml].
 - **methodName**: The name of service method.
 
 ### Logoff from Siebel
