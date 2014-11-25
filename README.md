@@ -64,5 +64,5 @@ This example demonstrates WSO2 ESB's Siebel connector transferring a message tri
 
 ### ESB configuration
 - Add the connector to ESB instance, see [Managing Connectors in Your ESB Instance ](https://docs.wso2.com/display/ESB481/Managing+Connectors+in+Your+ESB+Instance).
-- Start the ESB server and log into its management console UI (https: //localhost:9443/carbon).
+- Start the ESB server and log into its management console UI [https: //localhost:9443/carbon](https: //localhost:9443/carbon).
 - In the management console, navigate to the **Main** menu and click **Source View** in the **Service Bus** section.
