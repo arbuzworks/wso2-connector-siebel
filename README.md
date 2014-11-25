@@ -7,6 +7,7 @@ The following sections describe how to perform basic operations with the connect
 [Connecting to Siebel](#connecting -to-siebel)		
 [Call method with encoded string payload](#call-method-with-encoded-string-payload)  
 [Call method with XML payload](#call-method-with-xml-payload) 
+[Logoff from Siebel](#logoff-from-siebel)
 
 ### Connecting to Siebel
 To use the Siebel connector, add the <siebel.init> element in your configuration before any other Siebel connector operations. This configuration authenticates with Siebel by configuring the user credentials and login URL.
@@ -23,7 +24,7 @@ To use the Siebel connector, add the <siebel.init> element in your configuration
 
 ### Call method with encoded string payload
 
-To invoke a method passing encoded string payload, use siebel.invokeMethod with the following properties:
+To invoke a method passing encoded string payload, use siebel.invokeMethod with the following properties.
 
       <siebel.invokeMethod>
             <serviceName>Workflow Utilities</serviceName>
@@ -38,10 +39,9 @@ To invoke a method passing encoded string payload, use siebel.invokeMethod with 
 
 ### Call method with XML payload
 
-To invoke a method passing XML palyload, siebel.invokeMethod with the following properties:
+To invoke a method passing XML palyload, siebel.invokeMethod with the following properties.
 
-    </siebel.init>
-        <siebel.invokeMethod>
+    <siebel.invokeMethod>
         <serviceName>Workflow Utilities</serviceName>
         <methodName>Echo</methodName>
         <converterType>xml</converterType>
@@ -51,3 +51,18 @@ To invoke a method passing XML palyload, siebel.invokeMethod with the following 
 - **serviceName**: The name of Siebel service.
 - **converterType**: A convertert type [xml].
 - **methodName**: The name of service method.
+
+### Logoff from Siebel
+
+To logoff from Siebel, add the <siebel.init> element in your configuration.
+
+    <siebel.logoff/>
+    
+### Example Scenario
+
+This example demonstrates WSO2 ESB's Siebel connector transferring a message triggred by a stock quote client and then sends the response that comes from Siebel back to the client.
+
+### ESB configuration
+- Add the connector to ESB instance, see [Managing Connectors in Your ESB Instance ](https://docs.wso2.com/display/ESB481/Managing+Connectors+in+Your+ESB+Instance).
+- Start the ESB server and log into its management console UI (https: //localhost:9443/carbon).
+- In the management console, navigate to the **Main** menu and click **Source View** in the **Service Bus** section.
