@@ -9,6 +9,13 @@ The following sections describe how to perform basic operations with the connect
 [Call method with XML payload](#call-method-with-xml-payload) 
 
 ### Connecting to Siebel
+To use the Siebel connector, add the <siebel.init> element in your configuration before any other Siebel connector operations. This configuration authenticates with Siebel by configuring the user credentials and login URL.
+
+      <siebel.init>
+         <username>xxxxx</username>
+         <password>xxxxx</password>
+         <url>siebel://xx.xx.xxx.xxx:2321/SBA_80/ESEObjMgr_enu</url>
+      </siebel.init>
 
 ### Call method with encoded string payload
 
