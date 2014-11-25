@@ -29,7 +29,7 @@ To create a spreadsheet, usesiebel.invokeMethod and specify the following proper
             <serviceName>Workflow Utilities</serviceName>
             <methodName>Echo</methodName>
             <converterType>string</converterType>
-            <propertySet>@0*0*2*2*11*PropertySet3*4*Body11*Attribute 123*Calendar and                  Activities8*number#11*N2*0*10*Daterange3*0*8*EndDates19*2011-07-14       12:11:1110*StartDates19*2011-07-1411:11:110*0*10*Attachment2*4*VEVTVA==</propertySet>
+            <propertySet></propertySet>
       </siebel.invokeMethod>
       
 ### Call method with XML payload
