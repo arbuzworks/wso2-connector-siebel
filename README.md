@@ -4,3 +4,12 @@ Siebel Connector provides connectivity between the Siebel CRM and other applicat
 
 The following sections describe how to perform basic operations with the connector. For general information on using connectors and their operations in your ESB configurations, see [Using a Connector](https://docs.wso2.com/display/ESB481/Using+a+Connector).
 
+[Connecting to Siebel](#connecting -to-siebel)		
+[Call method with encoded string payload](#call-method-with-encoded-string-payload)  
+[Call method with XML payload](#call-method-with-xml-payload) 
+
+### Connecting to Siebel
+
+### Call method with encoded string payload
+
+### Call method with XML payload
