@@ -9,7 +9,7 @@ The following sections describe how to perform basic operations with the connect
 [Call method with XML payload](#call-method-with-xml-payload)
 [Logoff from Siebel](#logoff-from-siebel)
 [Example Scenario](#example-scenario)
-[ESB configuration](#esb-onfiguration)
+[ESB configuration](#esb-configuration)
 [Simulating the sample scenario](#simulating-the-sample-scenario)
 
 ### Connecting to Siebel
