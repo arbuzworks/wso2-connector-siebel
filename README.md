@@ -6,7 +6,7 @@ The following sections describe how to perform basic operations with the connect
 
 [Connecting to Siebel](#connecting -to-siebel)		
 [Call method with encoded string payload](#call-method-with-encoded-string-payload)  
-[Call method with XML payload](#call-method-with-xml-payload) 
+[Call method with XML payload](#call-method-with-xml-payload)
 [Logoff from Siebel](#logoff-from-siebel)
 [Example Scenario](#example-scenario)
 [ESB configuration](#esb-onfiguration)
