@@ -118,4 +118,4 @@ Send a request as follows using the Stock Quote Client to WSO2 ESB.
 
     ant stockquote -Dtrpurl=http://localhost:8280
 
-This command executes the connector, which simulates sending a request to Siebel and sends the response from Siebel back to the client.
+This command executes the connector, which simulates sending the request to Siebel and sends the response from Siebel back to the client.
